@@ -1,0 +1,81 @@
+:root {
+  --off-white: #F5F3F0;
+  --charcoal: #1A1A1A;
+  --deep-green: #2D4A3E;
+  --coffee-brown: #6B4423;
+  --muted-gold: #C4A57B;
+  --accent-green: #3D7B6B;
+  --font-heading: 'Inter', 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+  --spacing-3xl: 80px;
+  --container-max: 1200px;
+  --container-padding: 24px;
+  --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--charcoal); background-color: var(--off-white); -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; line-height: 1.3; margin-bottom: var(--spacing-lg); color: var(--charcoal); }
+h1 { font-size: clamp(32px, 8vw, 56px); }
+h2 { font-size: clamp(28px, 6vw, 48px); }
+h3 { font-size: clamp(24px, 5vw, 36px); }
+h4 { font-size: 20px; }
+p { margin-bottom: var(--spacing-md); }
+a { color: var(--accent-green); text-decoration: none; transition: var(--transition); }
+a:hover { opacity: 0.8; }
+
+.container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-padding); }
+
+.btn { display: inline-block; padding: 14px 32px; font-family: var(--font-heading); font-size: 16px; font-weight: 600; border: none; border-radius: 4px; cursor: pointer; transition: var(--transition); min-height: 48px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+.btn-primary { background-color: var(--accent-green); color: white; }
+.btn-primary:hover { background-color: var(--deep-green); }
+.btn-secondary { background-color: transparent; color: var(--accent-green); border: 2px solid var(--accent-green); }
+.btn-secondary:hover { background-color: var(--accent-green); color: white; }
+
+img { max-width: 100%; height: auto; display: block; }
+section { padding: var(--spacing-3xl) 0; }
+
+.grid { display: grid; gap: var(--spacing-xl); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } section { padding: var(--spacing-xl) 0; } }
+
+.text-center { text-align: center; }
+.text-large { font-size: 18px; line-height: 1.7; }
+.text-small { font-size: 14px; }
+.text-muted { color: #666; }
+.text-bold { font-weight: 600; }
+.hidden { display: none !important; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.bg-charcoal { background-color: var(--charcoal); color: var(--off-white); }
+.bg-charcoal h2, .bg-charcoal h3 { color: var(--off-white); }
+.bg-deep-green { background-color: var(--deep-green); color: var(--off-white); }
+.bg-deep-green h2, .bg-deep-green h3 { color: var(--off-white); }
+
+input, textarea, select { font-family: var(--font-body); font-size: 16px; padding: 12px 16px; border: 1px solid #ddd; border-radius: 4px; background-color: white; color: var(--charcoal); transition: var(--transition); width: 100%; }
+input:focus, textarea:focus, select:focus { outline: none; border-color: var(--accent-green); box-shadow: 0 0 0 3px rgba(61, 123, 107, 0.1); }
+textarea { resize: vertical; min-height: 120px; }
+label { display: block; margin-bottom: var(--spacing-sm); font-weight: 600; font-size: 14px; }
+.form-group { margin-bottom: var(--spacing-lg); }
+
+@media print { body { background-color: white; } section { page-break-inside: avoid; } }

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Coffee Export, Sourcing & Logistics Partner | Origin Coffee Export</title>
+  <meta name="description" content="Reliable green coffee sourcing, quality control, export logistics, and importer support for roasters, distributors, and commodity buyers worldwide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/global.css">
+  <style>
+    header { background-color: var(--off-white); border-bottom: 1px solid #e0ddd9; position: sticky; top: 0; z-index: 100; transition: 0.3s; }
+    header.scrolled { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+    .header-content { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+    .logo { font: 700 20px var(--font-heading); color: var(--charcoal); text-decoration: none; }
+    nav a { color: var(--charcoal); font-weight: 500; font-size: 14px; transition: 0.3s; padding: 8px 12px; }
+    nav a:hover, nav a.active { color: var(--accent-green); }
+    nav a.active { font-weight: 600; }
+    .nav-menu { display: flex; gap: 32px; align-items: center; list-style: none; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--charcoal); }
+    @media (max-width: 768px) { .nav-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background-color: white; border-bottom: 1px solid #e0ddd9; padding: 16px 24px; gap: 16px; } .nav-menu.open { display: flex; } .mobile-menu-btn { display: block; } }
+    .hero { position: relative; height: 100vh; min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; overflow: hidden; padding: 64px 24px; }
+    .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+    .hero .overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); z-index: 1; }
+    .hero-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+    .hero h1 { margin-bottom: 24px; color: white; }
+    .hero p { font-size: 18px; margin-bottom: 48px; color: rgba(255, 255, 255, 0.95); }
+    .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    @media (max-width: 768px) { .hero { min-height: 400px; padding: 48px 24px; } .hero h1 { font-size: 28px; } .hero-ctas { flex-direction: column; } .hero .btn { width: 100%; } }
+    .trust-bar { background-color: var(--charcoal); color: var(--off-white); padding: 64px 24px; }
+    .trust-bar-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; text-align: center; }
+    .trust-item h3 { color: var(--muted-gold); font-size: 14px; margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .trust-item p { font-size: 16px; color: var(--off-white); margin-bottom: 0; }
+    .service-card { background-color: white; padding: 32px; border-radius: 8px; border: 1px solid #e0ddd9; transition: 0.3s; }
+    .service-card:hover { border-color: var(--accent-green); box-shadow: 0 8px 24px rgba(61, 123, 107, 0.1); }
+    .service-card h3 { color: var(--accent-green); margin-bottom: 16px; }
+    .service-card p { color: #666; margin-bottom: 0; }
+    .section-image { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    @media (max-width: 1024px) { .section-image { grid-template-columns: 1fr; gap: 32px; } }
+    .bg-deep-green { background-color: var(--deep-green); color: var(--off-white); }
+    .bg-deep-green h2, .bg-deep-green h3 { color: var(--off-white); }
+    .bg-charcoal { background-color: var(--charcoal); color: var(--off-white); }
+    .program-card { background-color: white; border: 1px solid #e0ddd9; border-radius: 8px; padding: 32px; text-align: center; transition: 0.3s; }
+    .program-card:hover { border-color: var(--accent-green); box-shadow: 0 8px 24px rgba(61, 123, 107, 0.1); }
+    .program-card h4 { color: var(--accent-green); margin-bottom: 16px; }
+    .metric { text-align: center; }
+    .metric-number { font: 700 48px var(--font-heading); color: var(--accent-green); margin-bottom: 8px; }
+    .metric-label { font-size: 14px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+    footer { background-color: var(--charcoal); color: var(--off-white); padding: 80px 24px 32px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 64px; margin-bottom: 80px; max-width: 1200px; margin-left: auto; margin-right: auto; }
+    .footer-section h3 { color: var(--off-white); margin-bottom: 16px; font-size: 16px; }
+    .footer-section ul { list-style: none; }
+    .footer-section li { margin-bottom: 12px; }
+    .footer-section a { color: #ccc; font-size: 14px; }
+    .footer-section a:hover { color: var(--muted-gold); }
+    .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; text-align: center; font-size: 14px; color: #999; max-width: 1200px; margin: 0 auto; }
+    .cta-section { background-color: var(--deep-green); color: var(--off-white); text-align: center; padding: 80px 24px; }
+    .cta-section h2 { color: var(--off-white); margin-bottom: 16px; }
+    .cta-section p { font-size: 18px; margin-bottom: 32px; color: rgba(255, 255, 255, 0.9); }
+    ul.features { list-style-position: inside; margin-left: 0; margin-bottom: 16px; }
+    ul.features li { margin-bottom: 12px; color: #666; padding-left: 12px; }
+    ul.features li:before { content: "✓ "; color: var(--accent-green); font-weight: 700; margin-right: 8px; }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="header-content">
+      <a href="/" class="logo">☕ Origin Coffee Export</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/sourcing.html">Sourcing</a></li>
+          <li><a href="/quality-control.html">Quality</a></li>
+          <li><a href="/export-logistics.html">Logistics</a></li>
+          <li><a href="/buyer-programs.html">Buyer Programs</a></li>
+          <li><a href="/sustainability.html">Sustainability</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html" class="btn btn-primary" style="padding: 10px 20px; margin-left: 32px;">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="/images/Coffee 1.png" alt="Coffee warehouse and shipping containers" class="hero-bg">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Green Coffee Export Built for Reliable Global Trade</h1>
+      <p>We source, quality-control, consolidate, and export green coffee for international importers, roasters, distributors, and commodity buyers who need consistency from origin to shipment.</p>
+      <div class="hero-ctas">
+        <a href="/contact.html" class="btn btn-primary">Request Current Offers</a>
+        <a href="/export-logistics.html" class="btn btn-secondary" style="border-color: white; color: white;">View Export Capabilities</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-bar">
+    <div class="trust-bar-content">
+      <div class="trust-item"><h3>Origin-sourced lots</h3><p>Direct farm & mill relationships</p></div>
+      <div class="trust-item"><h3>Cupping lab verification</h3><p>Professional quality control</p></div>
+      <div class="trust-item"><h3>FOB and CIF coordination</h3><p>Full export terms supported</p></div>
+      <div class="trust-item"><h3>Containerized export</h3><p>Port-to-port logistics</p></div>
+      <div class="trust-item"><h3>Importer-focused documentation</h3><p>Transparent, reliable communication</p></div>
+    </div>
+  </section>
+
+  <section style="padding: 80px 24px;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 48px;">From Origin Selection to Export Execution</h2>
+      <div class="grid grid-4">
+        <div class="service-card"><h3>Coffee Sourcing</h3><p>Access reliable Arabica and Robusta lots through established producer, mill, and cooperative relationships.</p></div>
+        <div class="service-card"><h3>Quality Control</h3><p>Every lot is evaluated through physical grading, moisture checks, cupping, and sample approval before export.</p></div>
+        <div class="service-card"><h3>Export Logistics</h3><p>We coordinate consolidation, container loading, export documents, port handling, and shipment communication.</p></div>
+        <div class="service-card"><h3>Buyer Relationships</h3><p>We support importers and roasters with repeatable specs, transparent availability, and responsive follow-up.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-deep-green" style="padding: 80px 24px;">
+    <div class="container">
+      <div class="section-image" style="color: var(--off-white);">
+        <img src="/images/Coffee 2.png" alt="Professional cupping lab" style="border-radius: 8px;">
+        <div>
+          <h2 style="color: var(--off-white);">Quality Control Before the Contract Moves</h2>
+          <p style="color: rgba(255, 255, 255, 0.95);">Our process is designed to reduce uncertainty before shipment. Samples, grading reports, moisture data, cupping notes, and lot references help buyers make confident purchasing decisions.</p>
+          <ul class="features" style="color: rgba(255, 255, 255, 0.95);"><li>Physical grading & defect screening</li><li>Moisture content analysis</li><li>Screen size classification</li><li>Cup evaluation & tasting notes</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 80px 24px;">
+    <div class="container">
+      <div class="section-image">
+        <div>
+          <h2>Operational Discipline From Warehouse to Port</h2>
+          <p>Coffee export depends on timing, documentation, and execution. Our logistics team manages bagging, warehousing, container planning, customs documentation, and shipment updates.</p>
+          <ul class="features"><li>Lot consolidation & warehouse organization</li><li>Bagging, labeling, & pallet preparation</li><li>Container booking & scheduling</li><li>Loading & port documentation</li></ul>
+        </div>
+        <img src="/images/Coffee 5.png" alt="Shipping container with coffee" style="border-radius: 8px;">
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-charcoal" style="padding: 80px 24px;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 48px; color: var(--off-white);">Built Around Importer Requirements</h2>
+      <div class="grid grid-4">
+        <div class="program-card"><h4>Spot Availability</h4><p style="color: #666;">Current market offerings with flexible volume and immediate availability.</p></div>
+        <div class="program-card"><h4>Forward Contracts</h4><p style="color: #666;">Secured volume and pricing for upcoming harvests with flexible payment terms.</p></div>
+        <div class="program-card"><h4>Private Specs</h4><p style="color: #666;">Custom cup profiles and grading standards tailored to your roasting program.</p></div>
+        <div class="program-card"><h4>Certified Lots</h4><p style="color: #666;">Organic, Fair Trade, Rainforest Alliance, and direct-trade origin certifications.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 80px 24px;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 48px;">Proven Track Record</h2>
+      <div class="grid grid-4">
+        <div class="metric"><div class="metric-number">2,400+</div><div class="metric-label">Containers Shipped</div></div>
+        <div class="metric"><div class="metric-number">98%</div><div class="metric-label">On-Time Delivery</div></div>
+        <div class="metric"><div class="metric-number">45+</div><div class="metric-label">Active Buyer Relationships</div></div>
+        <div class="metric"><div class="metric-number">12</div><div class="metric-label">Origin Countries</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-deep-green" style="padding: 80px 24px;">
+    <div class="container">
+      <div class="section-image reverse" style="color: var(--off-white);">
+        <img src="/images/Coffee 3.png" alt="Coffee origin farm" style="border-radius: 8px;">
+        <div>
+          <h2 style="color: var(--off-white);">Sustainability & Traceability</h2>
+          <p style="color: rgba(255, 255, 255, 0.95);">We believe transparent sourcing builds long-term relationships. Every lot we export comes with producer information, farm location, harvest data, and quality metrics.</p>
+          <ul class="features" style="color: rgba(255, 255, 255, 0.95);"><li>Direct producer relationships & fair payment</li><li>Environmental farming practices support</li><li>Lot-level traceability documentation</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Talk to an Export Partner Who Understands Coffee and Trade</h2>
+      <p>Request samples, current offers, or a shipment discussion with our export team.</p>
+      <a href="/contact.html" class="btn btn-primary">Start Buyer Inquiry</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section"><h3>Company</h3><ul><li><a href="/about.html">About Us</a></li><li><a href="/sourcing.html">Coffee Sourcing</a></li><li><a href="/quality-control.html">Quality Control</a></li><li><a href="/export-logistics.html">Export & Logistics</a></li></ul></div>
+      <div class="footer-section"><h3>Buyers</h3><ul><li><a href="/buyer-programs.html">Buyer Programs</a></li><li><a href="/contact.html">Request Samples</a></li><li><a href="/contact.html">Current Offers</a></li><li><a href="/sustainability.html">Certifications</a></li></ul></div>
+      <div class="footer-section"><h3>Resources</h3><ul><li><a href="/origins.html">Origin Info</a></li><li><a href="/sustainability.html">Sustainability</a></li><li><a href="/insights.html">Insights</a></li><li><a href="/contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-section"><h3>Contact</h3><p style="color: #ccc; font-size: 14px;">Email: <a href="mailto:sourcing@origincoffee.com">sourcing@origincoffee.com</a><br><br>Export operations and buyer inquiries welcome.</p></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Origin Coffee Export. All rights reserved.</p></div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    const header = document.getElementById('header');
+    mobileMenuBtn.addEventListener('click', () => { navMenu.classList.toggle('open'); });
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => { navMenu.classList.remove('open'); });
+    });
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) { header.classList.add('scrolled'); } else { header.classList.remove('scrolled'); }
+    });
+  </script>
+</body>
+</html>
