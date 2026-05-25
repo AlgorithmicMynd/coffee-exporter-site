@@ -1,12 +1,25 @@
 :root {
-  --off-white: #F5F3F0;
-  --charcoal: #1A1A1A;
-  --deep-green: #2D4A3E;
-  --coffee-brown: #6B4423;
-  --muted-gold: #C4A57B;
-  --accent-green: #3D7B6B;
-  --font-heading: 'Inter', 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  /* Brand Color Palette (Orange & White focus) */
+  --off-white: #FAF9F6;         /* Premium warm B2B off-white background */
+  --pure-white: #FFFFFF;        /* Pure white for cards/surfaces */
+  --charcoal: #1C1917;          /* Soft slate stone charcoal for premium text/contrast */
+  --muted-charcoal: #44403C;    /* Muted text shade */
+  --deep-green: #7C2D12;        /* Burnt orange/terracotta - replacing deep green sections */
+  --coffee-brown: #5F3D26;      /* Rich coffee bean brown */
+  --muted-gold: #E5A93B;        /* Warm amber gold */
+  --accent-green: #FF5A1F;      /* Vibrant primary orange */
+  
+  /* Descriptive Brand Aliases */
+  --brand-orange: #FF5A1F;
+  --brand-orange-light: #FF8552;
+  --brand-orange-dark: #D43D00;
+  --brand-orange-deep: #7C2D12;
+  --brand-orange-bg: #FFF5F0;
+  --border-color: #EFEAE2;
+
+  /* Typography & Layout spacing */
+  --font-heading: 'Sora', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   --spacing-xs: 8px;
   --spacing-sm: 16px;
   --spacing-md: 24px;
@@ -16,29 +29,109 @@
   --spacing-3xl: 80px;
   --container-max: 1200px;
   --container-padding: 24px;
-  --transition: all 0.3s ease;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--charcoal); background-color: var(--off-white); -webkit-font-smoothing: antialiased; }
+body { 
+  font-family: var(--font-body); 
+  font-size: 16px; 
+  line-height: 1.6; 
+  color: var(--charcoal); 
+  background-color: var(--off-white); 
+  -webkit-font-smoothing: antialiased; 
+  text-rendering: optimizeLegibility;
+}
 
-h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; line-height: 1.3; margin-bottom: var(--spacing-lg); color: var(--charcoal); }
+/* Custom Premium Scrollbar */
+html {
+  scrollbar-color: var(--brand-orange) var(--off-white);
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--off-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-orange);
+  border-radius: 99px;
+  border: 2px solid var(--off-white);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-orange-dark);
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: var(--font-heading); 
+  font-weight: 700; 
+  line-height: 1.25; 
+  margin-bottom: var(--spacing-lg); 
+  color: var(--charcoal); 
+  text-wrap: balance; /* Balanced headings */
+}
 h1 { font-size: clamp(32px, 8vw, 56px); }
-h2 { font-size: clamp(28px, 6vw, 48px); }
-h3 { font-size: clamp(24px, 5vw, 36px); }
+h2 { font-size: clamp(28px, 6vw, 42px); }
+h3 { font-size: clamp(22px, 4vw, 32px); }
 h4 { font-size: 20px; }
-p { margin-bottom: var(--spacing-md); }
-a { color: var(--accent-green); text-decoration: none; transition: var(--transition); }
-a:hover { opacity: 0.8; }
+p { margin-bottom: var(--spacing-md); text-wrap: pretty; color: var(--muted-charcoal); }
+
+a { color: var(--brand-orange); text-decoration: none; transition: var(--transition); }
+a:hover { color: var(--brand-orange-dark); }
 
 .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-padding); }
 
-.btn { display: inline-block; padding: 14px 32px; font-family: var(--font-heading); font-size: 16px; font-weight: 600; border: none; border-radius: 4px; cursor: pointer; transition: var(--transition); min-height: 48px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
-.btn-primary { background-color: var(--accent-green); color: white; }
-.btn-primary:hover { background-color: var(--deep-green); }
-.btn-secondary { background-color: transparent; color: var(--accent-green); border: 2px solid var(--accent-green); }
-.btn-secondary:hover { background-color: var(--accent-green); color: white; }
+/* Premium Buttons */
+.btn { 
+  display: inline-flex; 
+  padding: 14px 32px; 
+  font-family: var(--font-heading); 
+  font-size: 16px; 
+  font-weight: 600; 
+  border: none; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  transition: var(--transition); 
+  min-height: 48px; 
+  align-items: center; 
+  justify-content: center; 
+  text-decoration: none; 
+}
+.btn-primary { 
+  background-color: var(--brand-orange); 
+  color: white; 
+  box-shadow: 0 4px 12px rgba(255, 90, 31, 0.15); 
+}
+.btn-primary:hover { 
+  background-color: var(--brand-orange-dark); 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 20px rgba(255, 90, 31, 0.25); 
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+.btn-secondary { 
+  background-color: transparent; 
+  color: var(--brand-orange); 
+  border: 2px solid var(--brand-orange); 
+}
+.btn-secondary:hover { 
+  background-color: var(--brand-orange); 
+  color: white; 
+  transform: translateY(-2px); 
+}
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Custom Interactive Outlines for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--brand-orange);
+  outline-offset: 4px;
+}
 
 img { max-width: 100%; height: auto; display: block; }
 section { padding: var(--spacing-3xl) 0; }
@@ -54,7 +147,7 @@ section { padding: var(--spacing-3xl) 0; }
 .text-center { text-align: center; }
 .text-large { font-size: 18px; line-height: 1.7; }
 .text-small { font-size: 14px; }
-.text-muted { color: #666; }
+.text-muted { color: var(--muted-charcoal); }
 .text-bold { font-weight: 600; }
 .hidden { display: none !important; }
 
@@ -67,15 +160,44 @@ section { padding: var(--spacing-3xl) 0; }
 .mt-lg { margin-top: var(--spacing-lg); }
 .mt-xl { margin-top: var(--spacing-xl); }
 
+/* Premium Card Scaling and Styling */
+.service-card, .program-card {
+  background-color: var(--pure-white);
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.service-card:hover, .program-card:hover {
+  border-color: var(--brand-orange-light);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(255, 90, 31, 0.08);
+}
+
 .bg-charcoal { background-color: var(--charcoal); color: var(--off-white); }
 .bg-charcoal h2, .bg-charcoal h3 { color: var(--off-white); }
-.bg-deep-green { background-color: var(--deep-green); color: var(--off-white); }
+.bg-deep-green { background-color: var(--brand-orange-deep); color: var(--off-white); }
 .bg-deep-green h2, .bg-deep-green h3 { color: var(--off-white); }
 
-input, textarea, select { font-family: var(--font-body); font-size: 16px; padding: 12px 16px; border: 1px solid #ddd; border-radius: 4px; background-color: white; color: var(--charcoal); transition: var(--transition); width: 100%; }
-input:focus, textarea:focus, select:focus { outline: none; border-color: var(--accent-green); box-shadow: 0 0 0 3px rgba(61, 123, 107, 0.1); }
+input, textarea, select { 
+  font-family: var(--font-body); 
+  font-size: 16px; 
+  padding: 12px 16px; 
+  border: 1px solid var(--border-color); 
+  border-radius: 6px; 
+  background-color: white; 
+  color: var(--charcoal); 
+  transition: var(--transition); 
+  width: 100%; 
+}
+input:focus, textarea:focus, select:focus { 
+  outline: none; 
+  border-color: var(--brand-orange); 
+  box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.15); 
+}
 textarea { resize: vertical; min-height: 120px; }
-label { display: block; margin-bottom: var(--spacing-sm); font-weight: 600; font-size: 14px; }
+label { display: block; margin-bottom: var(--spacing-sm); font-weight: 600; font-size: 14px; color: var(--charcoal); }
 .form-group { margin-bottom: var(--spacing-lg); }
 
 @media print { body { background-color: white; } section { page-break-inside: avoid; } }

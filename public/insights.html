@@ -3,24 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page | Origin Coffee Export</title>
+  <title>Insights & Market Intelligence | Safeena Coffee</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/global.css">
   <style>
-    header { background: white; border-bottom: 1px solid #e0ddd9; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font: 700 20px var(--font-heading); text-decoration: none; }
-    nav a { color: #1A1A1A; margin-left: 32px; font-weight: 500; }
-    footer { background: #1A1A1A; color: white; padding: 80px 24px; text-align: center; }
+    header { 
+      background-color: rgba(250, 249, 246, 0.85); 
+      backdrop-filter: blur(12px); 
+      -webkit-backdrop-filter: blur(12px); 
+      border-bottom: 1px solid rgba(28, 25, 23, 0.06); 
+      padding: 16px 24px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100;
+    }
+    .logo { font: 700 20px var(--font-heading); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    nav a { color: var(--charcoal); margin-left: 32px; font-weight: 500; transition: var(--transition); }
+    nav a:hover { color: var(--brand-orange); }
+    footer { background: var(--charcoal); color: var(--off-white); padding: 80px 24px; text-align: center; border-top: 2px solid var(--brand-orange); }
   </style>
 </head>
 <body>
-  <header><a href="/" class="logo">☕ Origin</a><nav><a href="/">Home</a> <a href="/contact.html" class="btn btn-primary">Contact</a></nav></header>
-  <div style="padding: 80px 24px; max-width: 1200px; margin: 0 auto; text-align: center;">
-    <h1>Welcome</h1>
-    <p style="font-size: 18px; margin-bottom: 32px;">This page is part of the Origin Coffee Export B2B website.</p>
+  <header>
+    <a href="/" class="logo">☕ <span style="color: var(--brand-orange);">Safeena</span> Coffee</a>
+    <nav><a href="/">Home</a> <a href="/contact.html" class="btn btn-primary" style="padding: 10px 20px; color: white;">Contact</a></nav>
+  </header>
+  <div style="padding: 120px 24px; max-width: 1200px; margin: 0 auto; text-align: center; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1 style="color: var(--charcoal); margin-bottom: 16px;">Insights</h1>
+    <p style="font-size: 18px; margin-bottom: 32px; color: var(--muted-charcoal); max-width: 600px;">This page is part of the Safeena Coffee B2B website. We are currently updating our market insights to reflect our latest offerings.</p>
     <a href="/" class="btn btn-primary">Return to Home</a>
   </div>
-  <footer><p>&copy; 2025 Origin Coffee Export.</p></footer>
+  <footer><p>&copy; 2026 Safeena Coffee. All rights reserved.</p></footer>
 </body>
 </html>
